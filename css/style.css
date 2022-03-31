@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 html {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Righteous', cursive;
     font-weight: 400;
 }
@@ -49,43 +53,55 @@ main h2:first-child {
     font-size: 26px;
 }
 
-main h2:nth-child(3), main h2:nth-child(5){
+main h2:nth-child(3),
+main h2:nth-child(5) {
     padding: 10px 0 0 20px;
     font-size: 26px;
 }
 
-.prato, .bebida, .sobremesa {
+.prato,
+.bebida,
+.sobremesa {
     display: flex;
     align-items: center;
     overflow-x: scroll;
     margin: 20px;
 }
 
-.prato div, .bebida div, .sobremesa div {
+.prato div,
+.bebida div,
+.sobremesa div {
     margin-right: 15px;
     padding: 15px;
     background-color: #fff;
     border: 3px solid #ebebeb;
     border-radius: 9px;
-
 }
 
-.prato div p, .bebida div p, .sobremesa div p{
+.prato div p,
+.bebida div p,
+.sobremesa div p {
     padding: 5px 0;
 }
 
-.prato div p:nth-child(2), .bebida div p:nth-child(2), .sobremesa div p:nth-child(2){
+.prato div p:nth-child(2),
+.bebida div p:nth-child(2),
+.sobremesa div p:nth-child(2) {
     font-size: 16px;
     font-weight: 700;
 }
 
-.prato div p:nth-child(3), .bebida div p:nth-child(3), .sobremesa div p:nth-child(3) {
+.prato div p:nth-child(3),
+.bebida div p:nth-child(3),
+.sobremesa div p:nth-child(3) {
     font-size: 15px;
     font-weight: 300;
     color: #a6a6a6;
 }
 
-.prato div p:nth-child(4), .bebida div p:nth-child(4), .sobremesa div p:nth-child(4) {
+.prato div p:nth-child(4),
+.bebida div p:nth-child(4),
+.sobremesa div p:nth-child(4) {
     font-size: 16px;
     font-weight: 400;
 }
@@ -101,7 +117,7 @@ footer {
     bottom: 0;
 }
 
-footer button {
+footer button:first-child {
     background-color: #cbcbcb;
     border: none;
     color: #fff;
@@ -109,4 +125,15 @@ footer button {
     font-weight: 400;
     border-radius: 50px;
     padding: 0.5rem 6rem;
+}
+
+footer button:last-child {
+    background-color: #32B72F;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 50px;
+    padding: 0.5rem 6rem;
+    display: none;
 }
