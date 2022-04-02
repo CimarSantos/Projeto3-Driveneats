@@ -27,13 +27,14 @@ function selecionaBebida(segundo) {
 
 function selecionaSobremesa(terceiro) {
 
-    const escolhaSobremesa = document.querySelector(".selecaoSobremesa");
+    let escolhaSobremesa = document.querySelector(".selecaoSobremesa");
+
 
     if (escolhaSobremesa !== null) {
         escolhaSobremesa.classList.remove("selecaoSobremesa");
+
     }
 
     terceiro.classList.add("selecaoSobremesa");
-
 
 }
