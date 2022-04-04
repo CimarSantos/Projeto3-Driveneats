@@ -1,3 +1,5 @@
+let pratoEscolhido;
+
 function selecionaComida(principal) {
 
     const escolhaComida = document.querySelector(".selecaoComida");
@@ -8,8 +10,11 @@ function selecionaComida(principal) {
     }
 
     principal.classList.add("selecaoComida");
-
+    pratoEscolhido = principal.querySelector(".nomePrato").textContent;
+    habilitaBotao();
 }
+
+let bebidaEscolhida;
 
 function selecionaBebida(segundo) {
 
@@ -20,10 +25,11 @@ function selecionaBebida(segundo) {
     }
 
     segundo.classList.add("selecaoBebida");
-
-
+    bebidaEscolhida = segundo.querySelector(".nomeBebida").textContent;
+    habilitaBotao();
 }
 
+let sobremesaEscolhida;
 
 function selecionaSobremesa(terceiro) {
 
@@ -36,5 +42,19 @@ function selecionaSobremesa(terceiro) {
     }
 
     terceiro.classList.add("selecaoSobremesa");
+    sobremesaEscolhida = terceiro.querySelector(".nomeSobremesa").textContent;
+    habilitaBotao();
+}
 
+
+function habilitaBotao() {
+    if ((sobremesaEscolhida !== undefined) && (bebidaEscolhida !== undefined) && (pratoEscolhido !== undefined)) {
+
+        document.querySelector(".botaoDesabilitado").style.display = "none";
+        document.querySelector(".fechaPedido").style.display = "initial";
+    }
+}
+
+function finalizandoPedido() {
+    alert("Boa");
 }
