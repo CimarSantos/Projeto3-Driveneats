@@ -1,4 +1,4 @@
-let pratoEscolhido;
+let pratoEscolhido, pratoPreco;
 
 function selecionaComida(principal) {
 
@@ -11,10 +11,11 @@ function selecionaComida(principal) {
 
     principal.classList.add("selecaoComida");
     pratoEscolhido = principal.querySelector(".nomePrato").textContent;
+    pratoPreco = parseFloat(principal.querySelector(".precoPrato").textContent);
     habilitaBotao();
 }
 
-let bebidaEscolhida;
+let bebidaEscolhida, bebidaPreco;
 
 function selecionaBebida(segundo) {
 
@@ -26,10 +27,11 @@ function selecionaBebida(segundo) {
 
     segundo.classList.add("selecaoBebida");
     bebidaEscolhida = segundo.querySelector(".nomeBebida").textContent;
+    bebidaPreco = parseFloat(segundo.querySelector(".precoBebida").textContent);
     habilitaBotao();
 }
 
-let sobremesaEscolhida;
+let sobremesaEscolhida, sobremesaPreco;
 
 function selecionaSobremesa(terceiro) {
 
@@ -43,6 +45,7 @@ function selecionaSobremesa(terceiro) {
 
     terceiro.classList.add("selecaoSobremesa");
     sobremesaEscolhida = terceiro.querySelector(".nomeSobremesa").textContent;
+    sobremesaPreco = parseFloat(terceiro.querySelector(".precoSobremesa").textContent);
     habilitaBotao();
 }
 
@@ -55,6 +58,23 @@ function habilitaBotao() {
     }
 }
 
+let fimPedido, nomeCliente, endereco, URI;
+
 function finalizandoPedido() {
-    alert("Boa");
+
+    nomeCliente = prompt("Como devemos te chamar quando o entregador chegar?");
+    endereco = prompt("Qual seu endereço?");
+
+    fimPedido = `Olá, gostaria de fazer o pedido:
+- Prato: ${pratoEscolhido}
+- Bebida: ${bebidaEscolhida}
+- Sobremesa: ${sobremesaEscolhida}
+Total: R$ ${(pratoPreco + bebidaPreco + sobremesaPreco).toFixed(2)}
+
+Nome: ${nomeCliente}
+Endereço: ${endereco}`;
+
+    URI = encodeURIComponent(fimPedido);
+
+    window.open("https://wa.me/5512988548474?text=" + URI);
 }

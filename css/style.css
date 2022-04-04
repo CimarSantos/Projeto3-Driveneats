@@ -77,6 +77,15 @@ main h2:nth-child(5) {
     border-radius: 9px;
 }
 
+.prato div img,
+.bebida div img,
+.sobremesa div img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
 .prato div p,
 .bebida div p,
 .sobremesa div p {
